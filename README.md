@@ -4,8 +4,7 @@ Proyecto del curso **EIN092B Visualización** (USM, 2026-2). Producto de datos i
 
 ## Integrantes
 - Juan Domenech
-- (por definir)
-
+- Sebastian Miranda
 ## Problema
 La seguridad pública se gestiona mejor cuando se entiende la **composición** del delito (qué tipos pesan más) y su **estacionalidad** (cuándo aumentan). Estas dos dimensiones no siempre son visibles en las cifras crudas del CEAD, que se publican como tablas extensas y poco legibles.
 
