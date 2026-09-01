@@ -1,25 +1,225 @@
-anio,familia,casos
-2026,Delitos contra la vida o integridad de las personas,14494
-2026,Robos violentos,3490
-2026,Violencia intrafamiliar,6919
-2026,Delitos asociados a drogas,1192
-2026,Delitos asociados a armas,1334
-2026,Delitos contra la propiedad no violentos,17398
-2026,Incivilidades,16859
-2026,Otros delitos o faltas,44321
-2025,Delitos contra la vida o integridad de las personas,28317
-2025,Robos violentos,8099
-2025,Violencia intrafamiliar,13761
-2025,Delitos asociados a drogas,2222
-2025,Delitos asociados a armas,2915
-2025,Delitos contra la propiedad no violentos,37352
-2025,Incivilidades,34986
-2025,Otros delitos o faltas,92360
-2024,Delitos contra la vida o integridad de las personas,27755
-2024,Robos violentos,9250
-2024,Violencia intrafamiliar,13338
-2024,Delitos asociados a drogas,1910
-2024,Delitos asociados a armas,3393
-2024,Delitos contra la propiedad no violentos,38046
-2024,Incivilidades,30905
-2024,Otros delitos o faltas,77843
+anio,familia,delito,nivel,casos
+2019,Delitos asociados a armas,Crímenes y simples delitos ley de armas,subtipo,514
+2019,Delitos asociados a armas,Delitos asociados a armas,familia,1508
+2019,Delitos asociados a armas,Porte de arma cortante o punzante,subtipo,994
+2019,Delitos asociados a drogas,Delitos asociados a drogas,familia,2397
+2019,Delitos contra la propiedad no violentos,Delitos contra la propiedad no violentos,familia,42036
+2019,Delitos contra la propiedad no violentos,Hurtos,subtipo,19212
+2019,Delitos contra la propiedad no violentos,Otros robos con fuerza en las cosas,subtipo,477
+2019,Delitos contra la propiedad no violentos,Receptación,subtipo,1229
+2019,Delitos contra la propiedad no violentos,Robos de vehículo motorizado o de sus accesorios,subtipo,7146
+2019,Delitos contra la propiedad no violentos,Robos en lugar habitado y no habitado,subtipo,13972
+2019,Delitos contra la vida o integridad de las personas,Amenazas,subtipo,15605
+2019,Delitos contra la vida o integridad de las personas,Delitos contra la vida o integridad de las personas,familia,26559
+2019,Delitos contra la vida o integridad de las personas,Homicidios y femicidios,subtipo,48
+2019,Delitos contra la vida o integridad de las personas,Lesiones graves o gravísimas,subtipo,878
+2019,Delitos contra la vida o integridad de las personas,Lesiones leves,subtipo,6971
+2019,Delitos contra la vida o integridad de las personas,Lesiones menos graves,subtipo,1026
+2019,Delitos contra la vida o integridad de las personas,Violaciones y otros delitos sexuales,subtipo,2031
+2019,Incivilidades,Amenaza falta o riña,subtipo,1229
+2019,Incivilidades,Consumo de alcohol y drogas en la vía pública,subtipo,25152
+2019,Incivilidades,Daños,subtipo,14367
+2019,Incivilidades,Desórdenes públicos,subtipo,3629
+2019,Incivilidades,Incivilidades,familia,60847
+2019,Incivilidades,Otras incivilidades,subtipo,16470
+2019,Otros delitos o faltas,Otros delitos o faltas,familia,65543
+2019,Robos violentos,Robo por sorpresa,subtipo,3991
+2019,Robos violentos,Robos con violencia o intimidación,subtipo,5255
+2019,Robos violentos,Robos violentos,familia,9246
+2019,Violencia intrafamiliar,Violencia intrafamiliar,familia,11968
+2020,Delitos asociados a armas,Crímenes y simples delitos ley de armas,subtipo,448
+2020,Delitos asociados a armas,Delitos asociados a armas,familia,875
+2020,Delitos asociados a armas,Porte de arma cortante o punzante,subtipo,427
+2020,Delitos asociados a drogas,Delitos asociados a drogas,familia,2118
+2020,Delitos contra la propiedad no violentos,Delitos contra la propiedad no violentos,familia,27804
+2020,Delitos contra la propiedad no violentos,Hurtos,subtipo,11639
+2020,Delitos contra la propiedad no violentos,Otros robos con fuerza en las cosas,subtipo,414
+2020,Delitos contra la propiedad no violentos,Receptación,subtipo,812
+2020,Delitos contra la propiedad no violentos,Robos de vehículo motorizado o de sus accesorios,subtipo,5330
+2020,Delitos contra la propiedad no violentos,Robos en lugar habitado y no habitado,subtipo,9609
+2020,Delitos contra la vida o integridad de las personas,Amenazas,subtipo,14783
+2020,Delitos contra la vida o integridad de las personas,Delitos contra la vida o integridad de las personas,familia,23887
+2020,Delitos contra la vida o integridad de las personas,Homicidios y femicidios,subtipo,77
+2020,Delitos contra la vida o integridad de las personas,Lesiones graves o gravísimas,subtipo,879
+2020,Delitos contra la vida o integridad de las personas,Lesiones leves,subtipo,5447
+2020,Delitos contra la vida o integridad de las personas,Lesiones menos graves,subtipo,967
+2020,Delitos contra la vida o integridad de las personas,Violaciones y otros delitos sexuales,subtipo,1734
+2020,Incivilidades,Amenaza falta o riña,subtipo,963
+2020,Incivilidades,Consumo de alcohol y drogas en la vía pública,subtipo,9211
+2020,Incivilidades,Daños,subtipo,10720
+2020,Incivilidades,Desórdenes públicos,subtipo,1022
+2020,Incivilidades,Incivilidades,familia,38930
+2020,Incivilidades,Otras incivilidades,subtipo,17014
+2020,Otros delitos o faltas,Otros delitos o faltas,familia,73024
+2020,Robos violentos,Robo por sorpresa,subtipo,2397
+2020,Robos violentos,Robos con violencia o intimidación,subtipo,4372
+2020,Robos violentos,Robos violentos,familia,6769
+2020,Violencia intrafamiliar,Violencia intrafamiliar,familia,11350
+2021,Delitos asociados a armas,Crímenes y simples delitos ley de armas,subtipo,586
+2021,Delitos asociados a armas,Delitos asociados a armas,familia,905
+2021,Delitos asociados a armas,Porte de arma cortante o punzante,subtipo,319
+2021,Delitos asociados a drogas,Delitos asociados a drogas,familia,2224
+2021,Delitos contra la propiedad no violentos,Delitos contra la propiedad no violentos,familia,21557
+2021,Delitos contra la propiedad no violentos,Hurtos,subtipo,8880
+2021,Delitos contra la propiedad no violentos,Otros robos con fuerza en las cosas,subtipo,269
+2021,Delitos contra la propiedad no violentos,Receptación,subtipo,615
+2021,Delitos contra la propiedad no violentos,Robos de vehículo motorizado o de sus accesorios,subtipo,4719
+2021,Delitos contra la propiedad no violentos,Robos en lugar habitado y no habitado,subtipo,7074
+2021,Delitos contra la vida o integridad de las personas,Amenazas,subtipo,15179
+2021,Delitos contra la vida o integridad de las personas,Delitos contra la vida o integridad de las personas,familia,23784
+2021,Delitos contra la vida o integridad de las personas,Homicidios y femicidios,subtipo,64
+2021,Delitos contra la vida o integridad de las personas,Lesiones graves o gravísimas,subtipo,650
+2021,Delitos contra la vida o integridad de las personas,Lesiones leves,subtipo,4885
+2021,Delitos contra la vida o integridad de las personas,Lesiones menos graves,subtipo,839
+2021,Delitos contra la vida o integridad de las personas,Violaciones y otros delitos sexuales,subtipo,2167
+2021,Incivilidades,Amenaza falta o riña,subtipo,827
+2021,Incivilidades,Consumo de alcohol y drogas en la vía pública,subtipo,10168
+2021,Incivilidades,Daños,subtipo,11119
+2021,Incivilidades,Desórdenes públicos,subtipo,450
+2021,Incivilidades,Incivilidades,familia,39528
+2021,Incivilidades,Otras incivilidades,subtipo,16964
+2021,Otros delitos o faltas,Otros delitos o faltas,familia,64869
+2021,Robos violentos,Robo por sorpresa,subtipo,1576
+2021,Robos violentos,Robos con violencia o intimidación,subtipo,3136
+2021,Robos violentos,Robos violentos,familia,4712
+2021,Violencia intrafamiliar,Violencia intrafamiliar,familia,14380
+2022,Delitos asociados a armas,Crímenes y simples delitos ley de armas,subtipo,859
+2022,Delitos asociados a armas,Delitos asociados a armas,familia,1461
+2022,Delitos asociados a armas,Porte de arma cortante o punzante,subtipo,602
+2022,Delitos asociados a drogas,Delitos asociados a drogas,familia,2209
+2022,Delitos contra la propiedad no violentos,Delitos contra la propiedad no violentos,familia,35835
+2022,Delitos contra la propiedad no violentos,Hurtos,subtipo,13586
+2022,Delitos contra la propiedad no violentos,Otros robos con fuerza en las cosas,subtipo,491
+2022,Delitos contra la propiedad no violentos,Receptación,subtipo,1145
+2022,Delitos contra la propiedad no violentos,Robos de vehículo motorizado o de sus accesorios,subtipo,8881
+2022,Delitos contra la propiedad no violentos,Robos en lugar habitado y no habitado,subtipo,11732
+2022,Delitos contra la vida o integridad de las personas,Amenazas,subtipo,17499
+2022,Delitos contra la vida o integridad de las personas,Delitos contra la vida o integridad de las personas,familia,28322
+2022,Delitos contra la vida o integridad de las personas,Homicidios y femicidios,subtipo,105
+2022,Delitos contra la vida o integridad de las personas,Lesiones graves o gravísimas,subtipo,859
+2022,Delitos contra la vida o integridad de las personas,Lesiones leves,subtipo,6336
+2022,Delitos contra la vida o integridad de las personas,Lesiones menos graves,subtipo,1044
+2022,Delitos contra la vida o integridad de las personas,Violaciones y otros delitos sexuales,subtipo,2479
+2022,Incivilidades,Amenaza falta o riña,subtipo,856
+2022,Incivilidades,Consumo de alcohol y drogas en la vía pública,subtipo,9744
+2022,Incivilidades,Daños,subtipo,13211
+2022,Incivilidades,Desórdenes públicos,subtipo,290
+2022,Incivilidades,Incivilidades,familia,32392
+2022,Incivilidades,Otras incivilidades,subtipo,8291
+2022,Otros delitos o faltas,Otros delitos o faltas,familia,60212
+2022,Robos violentos,Robo por sorpresa,subtipo,2418
+2022,Robos violentos,Robos con violencia o intimidación,subtipo,5907
+2022,Robos violentos,Robos violentos,familia,8325
+2022,Violencia intrafamiliar,Violencia intrafamiliar,familia,14154
+2023,Delitos asociados a armas,Crímenes y simples delitos ley de armas,subtipo,1035
+2023,Delitos asociados a armas,Delitos asociados a armas,familia,1661
+2023,Delitos asociados a armas,Porte de arma cortante o punzante,subtipo,626
+2023,Delitos asociados a drogas,Delitos asociados a drogas,familia,2313
+2023,Delitos contra la propiedad no violentos,Delitos contra la propiedad no violentos,familia,39106
+2023,Delitos contra la propiedad no violentos,Hurtos,subtipo,14299
+2023,Delitos contra la propiedad no violentos,Otros robos con fuerza en las cosas,subtipo,490
+2023,Delitos contra la propiedad no violentos,Receptación,subtipo,1362
+2023,Delitos contra la propiedad no violentos,Robos de vehículo motorizado o de sus accesorios,subtipo,10155
+2023,Delitos contra la propiedad no violentos,Robos en lugar habitado y no habitado,subtipo,12800
+2023,Delitos contra la vida o integridad de las personas,Amenazas,subtipo,17687
+2023,Delitos contra la vida o integridad de las personas,Delitos contra la vida o integridad de las personas,familia,28826
+2023,Delitos contra la vida o integridad de las personas,Homicidios y femicidios,subtipo,107
+2023,Delitos contra la vida o integridad de las personas,Lesiones graves o gravísimas,subtipo,899
+2023,Delitos contra la vida o integridad de las personas,Lesiones leves,subtipo,6824
+2023,Delitos contra la vida o integridad de las personas,Lesiones menos graves,subtipo,1096
+2023,Delitos contra la vida o integridad de las personas,Violaciones y otros delitos sexuales,subtipo,2213
+2023,Incivilidades,Amenaza falta o riña,subtipo,893
+2023,Incivilidades,Consumo de alcohol y drogas en la vía pública,subtipo,9377
+2023,Incivilidades,Daños,subtipo,12970
+2023,Incivilidades,Desórdenes públicos,subtipo,269
+2023,Incivilidades,Incivilidades,familia,30473
+2023,Incivilidades,Otras incivilidades,subtipo,6964
+2023,Otros delitos o faltas,Otros delitos o faltas,familia,61058
+2023,Robos violentos,Robo por sorpresa,subtipo,2907
+2023,Robos violentos,Robos con violencia o intimidación,subtipo,6423
+2023,Robos violentos,Robos violentos,familia,9330
+2023,Violencia intrafamiliar,Violencia intrafamiliar,familia,13692
+2024,Delitos asociados a armas,Crímenes y simples delitos ley de armas,subtipo,2807
+2024,Delitos asociados a armas,Delitos asociados a armas,familia,3393
+2024,Delitos asociados a armas,Porte de arma cortante o punzante,subtipo,586
+2024,Delitos asociados a drogas,Delitos asociados a drogas,familia,1910
+2024,Delitos contra la propiedad no violentos,Delitos contra la propiedad no violentos,familia,38046
+2024,Delitos contra la propiedad no violentos,Hurtos,subtipo,13462
+2024,Delitos contra la propiedad no violentos,Otros robos con fuerza en las cosas,subtipo,627
+2024,Delitos contra la propiedad no violentos,Receptación,subtipo,1171
+2024,Delitos contra la propiedad no violentos,Robos de vehículo motorizado o de sus accesorios,subtipo,10339
+2024,Delitos contra la propiedad no violentos,Robos en lugar habitado y no habitado,subtipo,12447
+2024,Delitos contra la vida o integridad de las personas,Amenazas,subtipo,17064
+2024,Delitos contra la vida o integridad de las personas,Delitos contra la vida o integridad de las personas,familia,27755
+2024,Delitos contra la vida o integridad de las personas,Homicidios y femicidios,subtipo,112
+2024,Delitos contra la vida o integridad de las personas,Lesiones graves o gravísimas,subtipo,722
+2024,Delitos contra la vida o integridad de las personas,Lesiones leves,subtipo,6568
+2024,Delitos contra la vida o integridad de las personas,Lesiones menos graves,subtipo,1139
+2024,Delitos contra la vida o integridad de las personas,Violaciones y otros delitos sexuales,subtipo,2150
+2024,Incivilidades,Amenaza falta o riña,subtipo,791
+2024,Incivilidades,Consumo de alcohol y drogas en la vía pública,subtipo,9080
+2024,Incivilidades,Daños,subtipo,13229
+2024,Incivilidades,Desórdenes públicos,subtipo,262
+2024,Incivilidades,Incivilidades,familia,30905
+2024,Incivilidades,Otras incivilidades,subtipo,7543
+2024,Otros delitos o faltas,Otros delitos o faltas,familia,77843
+2024,Robos violentos,Robo por sorpresa,subtipo,3107
+2024,Robos violentos,Robos con violencia o intimidación,subtipo,6143
+2024,Robos violentos,Robos violentos,familia,9250
+2024,Violencia intrafamiliar,Violencia intrafamiliar,familia,13338
+2025,Delitos asociados a armas,Crímenes y simples delitos ley de armas,subtipo,2009
+2025,Delitos asociados a armas,Delitos asociados a armas,familia,2915
+2025,Delitos asociados a armas,Porte de arma cortante o punzante,subtipo,906
+2025,Delitos asociados a drogas,Delitos asociados a drogas,familia,2222
+2025,Delitos contra la propiedad no violentos,Delitos contra la propiedad no violentos,familia,37352
+2025,Delitos contra la propiedad no violentos,Hurtos,subtipo,13999
+2025,Delitos contra la propiedad no violentos,Otros robos con fuerza en las cosas,subtipo,642
+2025,Delitos contra la propiedad no violentos,Receptación,subtipo,1133
+2025,Delitos contra la propiedad no violentos,Robos de vehículo motorizado o de sus accesorios,subtipo,10370
+2025,Delitos contra la propiedad no violentos,Robos en lugar habitado y no habitado,subtipo,11208
+2025,Delitos contra la vida o integridad de las personas,Amenazas,subtipo,17602
+2025,Delitos contra la vida o integridad de las personas,Delitos contra la vida o integridad de las personas,familia,28317
+2025,Delitos contra la vida o integridad de las personas,Homicidios y femicidios,subtipo,90
+2025,Delitos contra la vida o integridad de las personas,Lesiones graves o gravísimas,subtipo,797
+2025,Delitos contra la vida o integridad de las personas,Lesiones leves,subtipo,6518
+2025,Delitos contra la vida o integridad de las personas,Lesiones menos graves,subtipo,1176
+2025,Delitos contra la vida o integridad de las personas,Violaciones y otros delitos sexuales,subtipo,2134
+2025,Incivilidades,Amenaza falta o riña,subtipo,861
+2025,Incivilidades,Consumo de alcohol y drogas en la vía pública,subtipo,11809
+2025,Incivilidades,Daños,subtipo,13230
+2025,Incivilidades,Desórdenes públicos,subtipo,186
+2025,Incivilidades,Incivilidades,familia,34986
+2025,Incivilidades,Otras incivilidades,subtipo,8900
+2025,Otros delitos o faltas,Otros delitos o faltas,familia,92360
+2025,Robos violentos,Robo por sorpresa,subtipo,2896
+2025,Robos violentos,Robos con violencia o intimidación,subtipo,5203
+2025,Robos violentos,Robos violentos,familia,8099
+2025,Violencia intrafamiliar,Violencia intrafamiliar,familia,13761
+2026,Delitos asociados a armas,Crímenes y simples delitos ley de armas,subtipo,737
+2026,Delitos asociados a armas,Delitos asociados a armas,familia,1334
+2026,Delitos asociados a armas,Porte de arma cortante o punzante,subtipo,597
+2026,Delitos asociados a drogas,Delitos asociados a drogas,familia,1192
+2026,Delitos contra la propiedad no violentos,Delitos contra la propiedad no violentos,familia,17398
+2026,Delitos contra la propiedad no violentos,Hurtos,subtipo,6425
+2026,Delitos contra la propiedad no violentos,Otros robos con fuerza en las cosas,subtipo,317
+2026,Delitos contra la propiedad no violentos,Receptación,subtipo,617
+2026,Delitos contra la propiedad no violentos,Robos de vehículo motorizado o de sus accesorios,subtipo,4693
+2026,Delitos contra la propiedad no violentos,Robos en lugar habitado y no habitado,subtipo,5346
+2026,Delitos contra la vida o integridad de las personas,Amenazas,subtipo,9044
+2026,Delitos contra la vida o integridad de las personas,Delitos contra la vida o integridad de las personas,familia,14494
+2026,Delitos contra la vida o integridad de las personas,Homicidios y femicidios,subtipo,58
+2026,Delitos contra la vida o integridad de las personas,Lesiones graves o gravísimas,subtipo,376
+2026,Delitos contra la vida o integridad de las personas,Lesiones leves,subtipo,3406
+2026,Delitos contra la vida o integridad de las personas,Lesiones menos graves,subtipo,573
+2026,Delitos contra la vida o integridad de las personas,Violaciones y otros delitos sexuales,subtipo,1037
+2026,Incivilidades,Amenaza falta o riña,subtipo,378
+2026,Incivilidades,Consumo de alcohol y drogas en la vía pública,subtipo,5669
+2026,Incivilidades,Daños,subtipo,6293
+2026,Incivilidades,Desórdenes públicos,subtipo,83
+2026,Incivilidades,Incivilidades,familia,16859
+2026,Incivilidades,Otras incivilidades,subtipo,4436
+2026,Otros delitos o faltas,Otros delitos o faltas,familia,44321
+2026,Robos violentos,Robo por sorpresa,subtipo,1309
+2026,Robos violentos,Robos con violencia o intimidación,subtipo,2181
+2026,Robos violentos,Robos violentos,familia,3490
+2026,Violencia intrafamiliar,Violencia intrafamiliar,familia,6919
