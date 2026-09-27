@@ -5,6 +5,7 @@ Proyecto del curso **EIN092B Visualización** (USM, 2026-2). Producto de datos i
 ## Integrantes
 - Juan Domenech
 - Sebastian Miranda
+
 ## Problema
 La seguridad pública se gestiona mejor cuando se entiende la **composición** del delito (qué tipos pesan más) y su **estacionalidad** (cuándo aumentan). Estas dos dimensiones no siempre son visibles en las cifras crudas del CEAD, que se publican como tablas extensas y poco legibles.
 
@@ -37,24 +38,43 @@ Cada fila corresponde a la cantidad de casos policiales registrados para un tipo
 ```
 proyecto-viz-delitos/
 ├── data/
-│   ├── raw/          datos originales del CEAD (no versionados si son pesados)
-│   └── processed/    dataset limpio en formato largo (año, mes, tipo, casos)
+│   ├── raw/          export original del CEAD (no versionado por peso)
+│   └── processed/    datasets limpios (mensual y anual, formato largo)
 ├── notebooks/
-│   └── 01_exploracion.ipynb
+│   ├── 01_exploracion.ipynb   primeras vistas (Avance 1)
+│   └── 02_eda.ipynb           EDA completo (Avance 2)
 ├── src/
-│   └── data_prep.py  limpieza y transformación del export CEAD
+│   ├── data_prep.py  limpieza y transformación del export CEAD
+│   └── viz.py        funciones de gráficos reutilizables (notebook + app)
+├── app/
+│   ├── app.py                 Página 1: Contexto y Datos
+│   └── pages/
+│       ├── 2_EDA.py           Página 2: Análisis Exploratorio
+│       └── 3_Analisis.py      Página 3: Análisis de la Pregunta
 ├── figures/          gráficos exportados
-├── app/              aplicación Streamlit (avances posteriores)
 ├── requirements.txt
 ├── README.md
 └── .gitignore
 ```
 
+## Cómo obtener los datos
+En https://data.cead.spd.gob.cl, sección Casos Policiales: filtrar **Región de Valparaíso**, años **2019-2026**, temporalidad por **Mes**, con los tipos de delito desagregados, y exportar. El CEAD entrega un `.xls` que en realidad es HTML; `src/data_prep.py` lo parsea (maneja el formato numérico chileno y el bloque de metadatos).
+
 ## Cómo reproducir
 1. `pip install -r requirements.txt`
-2. Colocar el export del CEAD en `data/raw/`.
-3. Ejecutar `python src/data_prep.py` para generar el dataset limpio en `data/processed/`.
-4. Abrir `notebooks/01_exploracion.ipynb`.
+2. Colocar el export del CEAD en `data/raw/reportes_mensual.xls`.
+3. Ejecutar `python src/data_prep.py` para generar los datasets limpios en `data/processed/` (mensual y anual).
+4. EDA: abrir `notebooks/02_eda.ipynb`.
+5. Aplicación: `streamlit run app/app.py`.
+
+## Aplicación (Streamlit)
+Tres páginas con propósito analítico diferenciado:
+1. **Contexto y Datos** — problema, pregunta, X/Y/T, tamaño y calidad del dataset.
+2. **Análisis Exploratorio** — composición, estacionalidad (heatmap) y dispersión, con filtros de año y familia.
+3. **Análisis de la Pregunta** — evolución mensual, tendencia interanual, índice estacional y variación, con selección de familia.
+
+Visualizaciones interactivas hechas con Plotly (barras, líneas, heatmap, boxplot). Cada gráfico se acompaña de su interpretación.
 
 ## Estado
-Avance 1: formulación del problema, pregunta, datos y repositorio.
+- **Avance 1**: formulación del problema, pregunta, datos y repositorio.
+- **Avance 2**: EDA (`notebooks/02_eda.ipynb`) y aplicación interactiva en Streamlit (`app/`).
