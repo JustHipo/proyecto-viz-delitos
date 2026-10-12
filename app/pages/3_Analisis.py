@@ -24,7 +24,6 @@ df = load()
 fam = viz.familias(df)
 
 st.title("Análisis de la Pregunta")
-st.caption("¿Qué hemos aprendido sobre nuestra pregunta?")
 
 opciones = fam.groupby("Familia")["casos"].sum().sort_values(ascending=False).index.tolist()
 c1, c2 = st.columns([1, 1])
@@ -68,6 +67,5 @@ st.markdown(
     "lo que más crece.\n"
     "4. Los **delitos contra la propiedad tienen estacionalidad de verano** (peak en enero).\n\n"
     "**Cómo refina la pregunta:** el foco más prometedor es cruzar composición y estacionalidad "
-    "por familia, y explicar la caída/recuperación 2020-2025. La dimensión comunal queda fuera "
-    "por los datos disponibles."
+    "por familia, y explicar la caída/recuperación 2020-2025."
 )

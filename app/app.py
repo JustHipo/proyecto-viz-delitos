@@ -53,12 +53,8 @@ st.markdown(
     "**Resumen de calidad.** Sin faltantes ni duplicados tras la limpieza. "
     "2026 es parcial (hasta junio), por lo que se excluye de las comparaciones "
     "anuales. En 5 de las 8 familias el total coincide exacto con la suma de sus "
-    "subtipos (no se mezclan niveles para evitar doble conteo). El dato es regional "
-    "agregado: no hay desglose por comuna (límite del proyecto)."
+    "subtipos (no se mezclan niveles para evitar doble conteo)."
 )
 
 st.subheader("Indicadores descriptivos")
 st.plotly_chart(viz.fig_totales_anuales(fam), use_container_width=True)
-
-st.info("Propósito de esta página: ¿qué estamos estudiando y con qué datos? "
-        "Usa el menú lateral para ir a **Análisis Exploratorio** y **Análisis de la Pregunta**.")

@@ -24,7 +24,6 @@ df = load()
 fam = viz.familias(df)
 
 st.title("Análisis Exploratorio")
-st.caption("¿Cómo se comportan nuestros datos?")
 
 # --- Controles interactivos ---
 opciones = fam.groupby("Familia")["casos"].sum().sort_values(ascending=False).index.tolist()
@@ -54,8 +53,8 @@ st.markdown(
     "Cada fila está normalizada al promedio de esa familia (**100 = mes típico**), con paleta "
     "divergente: **terracota = meses sobre su promedio**, **teal = bajo su promedio**. Así la "
     "estacionalidad se compara entre familias grandes y chicas. Se ve el alza de verano (enero) "
-    "en propiedad e incivilidades, y familias casi planas como drogas. La magnitud absoluta va "
-    "en el gráfico de composición."
+    "en propiedad e incivilidades, mientras *otros delitos o faltas* es casi plano. Drogas y "
+    "armas son las que más varían, pero tienen pocos casos al mes."
 )
 
 st.subheader("Dispersión por familia")
