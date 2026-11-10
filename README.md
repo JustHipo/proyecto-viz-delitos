@@ -42,10 +42,12 @@ proyecto-viz-delitos/
 │   └── processed/    datasets limpios (mensual y anual, formato largo)
 ├── notebooks/
 │   ├── 01_exploracion.ipynb   primeras vistas (Avance 1)
-│   └── 02_eda.ipynb           EDA completo (Avance 2)
+│   ├── 02_eda.ipynb           EDA completo (Avance 2)
+│   └── 03_modelos.ipynb       modelos predictivos y SHAP (Avance 3)
 ├── src/
 │   ├── data_prep.py  limpieza y transformación del export CEAD
-│   └── viz.py        funciones de gráficos reutilizables (notebook + app)
+│   ├── viz.py        funciones de gráficos reutilizables (notebook + app)
+│   └── modeling.py   features, partición temporal y métricas (Avance 3)
 ├── app/
 │   ├── app.py                 Página 1: Contexto y Datos
 │   └── pages/
@@ -65,7 +67,8 @@ En https://data.cead.spd.gob.cl, sección Casos Policiales: filtrar **Región de
 2. Colocar el export del CEAD en `data/raw/reportes_mensual.xls`.
 3. Ejecutar `python src/data_prep.py` para generar los datasets limpios en `data/processed/` (mensual y anual).
 4. EDA: abrir `notebooks/02_eda.ipynb`.
-5. Aplicación: `streamlit run app/app.py`.
+5. Modelos: abrir `notebooks/03_modelos.ipynb` (genera las figuras `figures/a3_*.png`).
+6. Aplicación: `streamlit run app/app.py`.
 
 ## Aplicación (Streamlit)
 Tres páginas con propósito analítico diferenciado:
@@ -78,3 +81,4 @@ Visualizaciones interactivas hechas con Plotly (barras, líneas, heatmap, boxplo
 ## Estado
 - **Avance 1**: formulación del problema, pregunta, datos y repositorio.
 - **Avance 2**: EDA (`notebooks/02_eda.ipynb`) y aplicación interactiva en Streamlit (`app/`).
+- **Avance 3**: predicción de casos mensuales por familia con regresión Ridge y Random Forest, partición temporal (entrenamiento 2020-2024, prueba ene-2025 a jun-2026), métricas MAE, RMSE y R², y explicabilidad con SHAP (`notebooks/03_modelos.ipynb`).
