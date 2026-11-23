@@ -57,12 +57,15 @@ def _layout(fig, x, y):
     return fig
 
 
-def fig_composicion(fam, anio):
-    d = (fam[fam.anio == anio].groupby("Familia", as_index=False)["casos"].sum()
+def fig_composicion(fam, anios):
+    """Casos por familia sumando los años indicados (un año o una lista)."""
+    anios = [anios] if isinstance(anios, int) else list(anios)
+    periodo = str(anios[0]) if len(anios) == 1 else f"{anios[0]}-{anios[-1]}"
+    d = (fam[fam.anio.isin(anios)].groupby("Familia", as_index=False)["casos"].sum()
          .sort_values("casos"))
     fig = px.bar(d, x="casos", y="Familia", orientation="h",
                  color="Familia", color_discrete_map=FAMILIA_COLORS,
-                 title=f"Composición del delito por familia ({anio})")
+                 title=f"Composición del delito por familia ({periodo})")
     fig.update_layout(showlegend=False)
     return _layout(fig, "Casos policiales", "")
 
@@ -104,7 +107,7 @@ def fig_totales_anuales(fam):
     d["Periodo"] = d.anio.map(lambda a: "Pandemia (2020-2021)" if a in (2020, 2021) else "Resto")
     fig = px.bar(d, x="anio", y="casos", color="Periodo",
                  color_discrete_map={"Pandemia (2020-2021)": CLAY, "Resto": GREY},
-                 title="El delito cayó en pandemia (2020-2021) y ya recuperó el nivel de 2019")
+                 title="Los casos cayeron en 2020-2021 y recién en 2025 volvieron al nivel de 2019")
     fig.update_layout(showlegend=False)
     return _layout(fig, "Año", "Casos policiales")
 
@@ -139,6 +142,55 @@ def fig_indice_estacional(fam, familia_corta):
     fig.add_hline(y=100, line_dash="dash", line_color="gray")
     fig.update_layout(showlegend=False)
     return _layout(fig, "", "Índice")
+
+
+def _es_outlier_iqr(s):
+    q1, q3 = s.quantile([0.25, 0.75])
+    rango = q3 - q1
+    return (s < q1 - 1.5 * rango) | (s > q3 + 1.5 * rango)
+
+
+def tabla_univariada(fam):
+    """Tendencia central, dispersión, asimetría y outliers (regla IQR) de los
+    casos mensuales de cada familia."""
+    g = fam.groupby("Familia")["casos"]
+    t = pd.DataFrame({
+        "Media": g.mean(),
+        "Mediana": g.median(),
+        "Desv. estándar": g.std(),
+        "Asimetría": g.skew(),
+        "Meses atípicos (IQR)": g.apply(lambda s: int(_es_outlier_iqr(s).sum())),
+    })
+    return t.sort_values("Media", ascending=False)
+
+
+def outliers_por_anio(fam):
+    """Cantidad de meses atípicos (regla IQR, por familia) en cada año."""
+    marca = fam.groupby("Familia")["casos"].transform(_es_outlier_iqr)
+    return fam[marca].groupby("anio").size()
+
+
+def fig_subtipos(sub, familia_corta, anio):
+    d = (sub[(sub.Familia == familia_corta) & (sub.anio == anio)]
+         .groupby("delito", as_index=False)["casos"].sum().sort_values("casos"))
+    fig = px.bar(d, x="casos", y="delito", orientation="h",
+                 color_discrete_sequence=[FAMILIA_COLORS.get(familia_corta, TEAL)],
+                 title=f"Subtipos de {familia_corta} ({anio})")
+    return _layout(fig, "Casos policiales", "")
+
+
+def fig_correlacion(fam):
+    """Correlación (Pearson) entre las series mensuales de las familias, 2019-2025."""
+    w = fam[fam.anio <= 2025].pivot_table(index="fecha", columns="Familia", values="casos")
+    orden = fam.groupby("Familia")["casos"].sum().sort_values(ascending=False).index.tolist()
+    c = w.corr().reindex(index=orden, columns=orden)
+    fig = px.imshow(c, text_auto=".2f", zmin=-1, zmax=1,
+                    color_continuous_scale=[[0, TEAL], [0.5, "#F0EEE9"], [1, CLAY]],
+                    aspect="auto", labels=dict(color="Correlación"),
+                    title="Correlación mensual entre familias (2019-2025)")
+    fig.update_xaxes(side="bottom", tickangle=-30)
+    fig.update_layout(height=560)
+    return _layout(fig, "", "")
 
 
 def fig_variacion(fam, familia_corta):
